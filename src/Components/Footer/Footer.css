@@ -1,0 +1,14 @@
+.footer {
+    background-color: #212529;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+.brand {
+    color: turquoise;
+    text-transform: uppercase;
+}
+
+.footer-end {
+    text-align: center;
+}
