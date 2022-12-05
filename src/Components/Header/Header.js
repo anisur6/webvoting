@@ -25,7 +25,7 @@ const Header = () => {
                         width="30"
                         height="30"
                         className="d-inline-block align-top"
-                    />
+                    />BLOCKCHAIN
                     E-VOTE
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -39,14 +39,14 @@ const Header = () => {
 
                        
                           
-                            <Nav.Link href="#action1" className='fs-5 text-light'>
-                                <Link to="/addservice">Add Contendor</Link>
+                            {/* <Nav.Link href="#action1" className='fs-5 text-light'>
+                                <Link to="/addservice" className='text-decoration-none text-info'>Add Contendor</Link>
+                            </Nav.Link> */}
+                            <Nav.Link href="#action1" className='fs-5 text-light mx-1'>
+                                <Link to="/contendor" className='text-decoration-none text-info'>Contendor</Link>
                             </Nav.Link>
                             <Nav.Link href="#action1" className='fs-5 text-light'>
-                                <Link to="/contendor">Contendor</Link>
-                            </Nav.Link>
-                            <Nav.Link href="#action1" className='fs-5 text-light'>
-                                <Link to="/allvotes">All Votes</Link>
+                                <Link to="/allvotes" className='text-decoration-none text-info'>All Votes</Link>
                             </Nav.Link>
                         
                     </Nav>
@@ -58,7 +58,7 @@ const Header = () => {
                             <div className="d-flex">
                           
                             {
-                                user?.email && <div><img className="rounded-circle me-3" width="40px" src={user.photoURL} alt="" /><span className="me-2 text-warning">{user.displayName}</span></div>
+                                user?.email && <div><span className="me-2 text-warning">{user.email}</span></div>
                             }
 
 

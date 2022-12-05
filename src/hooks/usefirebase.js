@@ -76,9 +76,7 @@ const useFirebase = () => {
             })
 
 
-            .catch(error => {
-                setError(error.message);
-            })
+            .catch((error) => alert(error.message))
 
             .finally(() => setisLoading(false));
     }

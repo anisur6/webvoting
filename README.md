@@ -1,6 +1,6 @@
 # FIVE-MINUTE-SCHOOL
 
-This project  [LIVE link](https://gallant-swartz-880f15.netlify.app/).
+This project  [LIVE link]
 
 ## Purpose of this website
 

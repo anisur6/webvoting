@@ -12,7 +12,7 @@ const VoteConfirm = () => {
     const [service, setService] = useState({})
 
     useEffect(() => {
-        fetch(`https://obscure-caverns-79516.herokuapp.com/services/${userId}`)
+        fetch(`http://localhost:5000/services/${userId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
@@ -21,7 +21,7 @@ const VoteConfirm = () => {
 
     const onSubmit = data => {
         data.single = service;
-        axios.post('https://obscure-caverns-79516.herokuapp.com/bookings', data)
+        axios.post('http://localhost:5000/bookings', data)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

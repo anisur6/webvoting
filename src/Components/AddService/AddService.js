@@ -26,7 +26,7 @@ const AddService = () => {
     const onSubmit = data => {
 
         console.log(data);
-        axios.post('https://obscure-caverns-79516.herokuapp.com/services', data)
+        axios.post('http://localhost:5000/services', data)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {
@@ -58,7 +58,7 @@ const AddService = () => {
 
                             <input className="p-2" type="number" {...register("vote")} placeholder="Default Vote" />
 
-                            <input className="p-2" type="number" {...register("duration")} placeholder="Number of Quantity" />
+                
 
                             <input className="p-2" {...register("img")} placeholder="image Url" />
                             <input className="p-2 text-light bg-success fw-bold"

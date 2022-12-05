@@ -12,6 +12,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import AddService from './Components/AddService/AddService';
 import VoteConfirm from './Components/VoteConfirm/VoteConfirm';
 import Allvotes from './Components/Allvotes/Allvotes';
+import Register from './Components/Register/Register';
 
 
 
@@ -59,6 +60,11 @@ function App() {
             </PrivateRoute>
 
 
+
+          <Route path="/register">
+            <Register></Register>
+            </Route>
+            
 
           <Route>
             <Nopage></Nopage>

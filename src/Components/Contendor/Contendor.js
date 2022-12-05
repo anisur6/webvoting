@@ -8,7 +8,7 @@ const Contendor = () => {
 
 
     useEffect(() => {
-        fetch('https://obscure-caverns-79516.herokuapp.com/services')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setman(data));
     }, [])
@@ -28,7 +28,7 @@ const Contendor = () => {
                                         <Card.Title>{mans.name}</Card.Title>
                                         <Card.Text> {mans.description}</Card.Text>
                                         <Card.Text>{mans.vote}</Card.Text>
-                                        <Card.Text>{mans.duration}</Card.Text>
+                                        
 
                                         <Link className='btn btn-warning px-3 py-2 rounded-2' to={`/booking/${mans._id}`} variant="primary">Vote For {mans.name}</Link>
                                     </Card.Body>
