@@ -1,21 +1,17 @@
-# FIVE-MINUTE-SCHOOL
+# Web Vote
 
+<<<<<<< HEAD
 This project  [LIVE link]
+=======
+This project  [LIVE link](https://blockchain-webvote.netlify.app/).
+>>>>>>> cb243a4d7a771af678e6408144351f32c9b9927c
 
 ## Purpose of this website
 
-this is a online learning platform in bangladesh. almost 1000+ students have completed there course from our academy. we provide qualityful courses to our students. Also they are doing great out there.
+this is a online voating system, where a user can vote to an specfic person and also can see which contendor got how much vote.
+before voting a user have to register and then user can give his/her vote. there is also an option for adding contendor to get this option 
+you can add "/addservice" after the url in the search bar.
 
-### `Some of the best courses we provide`
-
-1. SSC 2022 Crash Course
-2. PRre Admission Medicasl Course
-3. English Spoken Advance
-4. Advance English Grammer Course
-5. HSC 2022 Crash Course.
-and many more to see.
-just fell free to visit our website
-(www.Five-minute-school.com)
 
 
 

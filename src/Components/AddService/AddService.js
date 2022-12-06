@@ -26,7 +26,7 @@ const AddService = () => {
     const onSubmit = data => {
 
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://web-vote-backend.vercel.app/services', data)
             .then(res => {
                 console.log(res.data);
                 if (res.data.insertedId) {

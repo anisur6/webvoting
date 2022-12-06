@@ -8,7 +8,7 @@ const Contendor = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://web-vote-backend.vercel.app/services')
             .then(res => res.json())
             .then(data => setman(data));
     }, [])

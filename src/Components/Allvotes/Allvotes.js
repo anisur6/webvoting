@@ -6,13 +6,13 @@ const Allvotes = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://web-vote-backend.vercel.app/bookings')
             .then(res => res.json())
             .then(data => setOrder(data));
     }, [])
 
 
-    const uniqueContendor = [ ];
+    const uniqueContendor = [];
  
     order.map((vote) => {
       const contendorId = vote.single._id;
@@ -24,14 +24,9 @@ const Allvotes = () => {
       } else {
         uniqueContendor[index]["count"] += 1;
       }
-    });
+    }, []);
      
-    // uniqueContendor.forEach((contendor) => {
-    //     return (
-    //         console.log(contendor.name, contendor.count)
-    //    )
-    //   });
-
+  
 
 
 

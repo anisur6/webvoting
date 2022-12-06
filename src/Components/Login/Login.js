@@ -6,7 +6,7 @@ import useAuth from '../../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
-    const { user, signInUsingGoogle, loginUser } = useAuth();
+    const {signInUsingGoogle, loginUser } = useAuth();
     // console.log(user);
     const [loginData, SetLoginData] = useState({});
 
@@ -23,14 +23,13 @@ const Login = () => {
 
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
-        console.log(field, value, newLoginData);
+        // console.log(field, value, newLoginData);
         SetLoginData(newLoginData)
     }
 
     const handleLoginSubmit = e => {
         loginUser(loginData.email, loginData.password, location, history)
         alert('are you sure to login ?')
-        
         e.preventDefault();
     }
 

@@ -8,7 +8,6 @@ initializeAuth();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
-    const [admin, setAdmin] = useState();
     const [isLoading, setisLoading] = useState(true);
 
 
@@ -31,7 +30,7 @@ const useFirebase = () => {
                 saveUser(email, name, 'POST');
 
 
-                setError(' ');
+                setError('');
                 history.replace('/');
             })
             .catch((error) => {
@@ -82,12 +81,7 @@ const useFirebase = () => {
     }
 
 
-    useEffect(() => {
-        const url = `https://drneshop-online.herokuapp.com/users/${user.email}`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setAdmin(data.admin))
-    }, [user.email])
+    
 
     const logOut = () => {
         setisLoading(true)
@@ -144,7 +138,6 @@ const useFirebase = () => {
         error,
         signInUsingGoogle,
         registerUser,
-        admin,
         loginUser,
         isLoading,
         logOut

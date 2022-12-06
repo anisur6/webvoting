@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import {Card, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
 import useAuth from '../../hooks/useAuth';
 
 const VoteConfirm = () => {
@@ -12,7 +13,7 @@ const VoteConfirm = () => {
     const [service, setService] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${userId}`)
+        fetch(`https://web-vote-backend.vercel.app/services/${userId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
@@ -21,14 +22,13 @@ const VoteConfirm = () => {
 
     const onSubmit = data => {
         data.single = service;
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://web-vote-backend.vercel.app/bookings', data)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if (res.data.insertedId) {
                     window.alert('Are you Sure to Add contendor ?');
                     reset();
                 }
-
             })
 
     }
@@ -46,7 +46,7 @@ const VoteConfirm = () => {
                 <Row>
                     <Col md={6}>
                         <Card className='my-5 p-3 mx-auto shadow border-0 text-center' style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={service.img} style={{ height: '300px', width: 'auto' }} />
+                            <Card.Img variant="top" src={service.img} style={{ height: '300px', width: 'auto' }} alt="contendor-img" />
                             <Card.Body>
                                 <Card.Title>{service.name}</Card.Title>
                                 <Card.Text> {service.description}</Card.Text>
